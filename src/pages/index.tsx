@@ -81,8 +81,8 @@ export default function Home({latestEpisodes, allEpisodes}: HomeProps) {
             <tr>
               <th></th>
               <th>Podcast</th>
-              <th>Integrantes</th>
-              <th>Data</th>
+              <th className={styles.phone}>Integrantes</th>
+              <th className={styles.phone}>Data</th>
               <th>Duração</th>
               <th></th>
             </tr>
@@ -102,11 +102,11 @@ export default function Home({latestEpisodes, allEpisodes}: HomeProps) {
                   </td>
                   <td>
                     <Link href={`/episodes/${episode.id}`}>
-                      <a>{episode.title}</a>
+                      <a className={styles.phoneText}>{episode.title}</a>
                     </Link>
                   </td>
-                  <td>{episode.members}</td>
-                  <td style={{ width: 100 }} >{episode.publishedAt}</td>
+                  <td className={styles.phone}>{episode.members}</td>
+                  <td style={{ width: 100 }} className={styles.phone} >{episode.publishedAt}</td>
                   <td>{episode.durationAsString}</td>
                   <td>
                     <button type="button" onClick={() => playList(episodeList, index + latestEpisodes.length)}>

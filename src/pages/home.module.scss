@@ -7,6 +7,12 @@
         margin-top: 3rem;
         margin-bottom: 1.5rem;
     }
+
+    @media(max-width: 650px){
+        padding: 0 1rem;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
 } 
 
 .latestEpisodes{
@@ -16,6 +22,26 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
 
+        @media(max-width: 1700px){
+            display: flex;
+            flex-direction: column;
+
+            li{
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 560px){
+            li{
+                display: flex;
+                flex-direction: column;
+                img{
+                    width: 8rem;
+                    height: 6rem;
+                }
+            }
+        }
+
         li{
             background: var(--white);
             border: 1px solid var(--gray-100);
@@ -24,11 +50,9 @@
             position: relative;
 
             display: flex;
-            align-items: center;
 
             img{
-                width: 6rem;
-                height: 6rem;
+                height: 8rem;
                 border-radius: 1rem;
             }
 
@@ -112,6 +136,16 @@
 .allEpisodes {
     padding-bottom: 2rem;
 
+    @media(max-width: 650px){
+        .phone{
+            display: none;
+        }
+
+        .phoneText{
+            font-size: 0.8rem;
+        }
+    }
+
     table {
         width: 100%;
     }
@@ -119,6 +153,10 @@
     th, td {
         padding: 0.75rem 1rem;
         border-bottom: 1px solid var(--gray-100);
+
+        @media(max-width: 650px){
+            padding: 0.5rem 0.5rem;
+        }
     }
 
     th {

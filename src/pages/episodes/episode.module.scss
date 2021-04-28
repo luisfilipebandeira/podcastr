@@ -3,9 +3,13 @@
     padding: 3rem 2rem;
     margin: 0 auto;
 
+    @media(max-width: 650px){
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
     .thumbnailContainer {
         position: relative;
-
         img{
             border-radius: 1rem;
         }
